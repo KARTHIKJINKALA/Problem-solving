@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Reminder App</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+    background-color: #f8f9fa;
+}
+
+h1 {
+    color: #007bff;
+}
+
+#waterProgress {
+    width: 100%;
+    height: 20px;
+}
+
+#progressText {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+</style>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Water Reminder App</h1>
+        <div class="card p-4">
+            <div class="form-group">
+                <label for="waterGoal">Set Your Daily Water Intake Goal (in liters):</label>
+                <input type="number" id="waterGoal" class="form-control" placeholder="e.g. 2">
+            </div>
+            <div class="form-group">
+                <label for="intervalTime">Reminder Interval (in minutes):</label>
+                <input type="number" id="intervalTime" class="form-control" placeholder="e.g. 60">
+            </div>
+            <button id="startBtn" class="btn btn-primary btn-block">Start Reminders</button>
+            <div id="progressContainer" class="mt-4">
+                <h5>Progress:</h5>
+                <progress id="waterProgress" value="0" max="100"></progress>
+                <p id="progressText"></p>
+            </div>
+        </div>
+    </div>
+
+  <script>
+    document.getElementById('startBtn').addEventListener('click', startReminder);
+
+let waterGoal = 0;
+let intakeLogged = 0;
+let intervalId;
+
+function startReminder() {
+    waterGoal = document.getElementById('waterGoal').value;
+    let intervalTime = document.getElementById('intervalTime').value;
+
+    if (waterGoal === "" || intervalTime === "") {
+        alert("Please fill in both fields!");
+        return;
+    }
+
+    // Set the reminder interval
+    intervalId = setInterval(remindToDrink, intervalTime * 60000);  // Convert minutes to milliseconds
+    updateProgress();
+}
+
+function remindToDrink() {
+    let drinkWater = confirm("Time to drink water!");
+    if (drinkWater) {
+        let amount = prompt("How much water did you drink (in liters)?");
+        intakeLogged += parseFloat(amount);
+        updateProgress();
+    }
+}
+
+function updateProgress() {
+    let progress = (intakeLogged / waterGoal) * 100;
+    progress = progress > 100 ? 100 : progress;  // Cap progress at 100%
+
+    // Update progress bar and text
+    document.getElementById('waterProgress').value = progress;
+    document.getElementById('progressText').innerText = `You have achieved ${progress.toFixed(2)}% of your goal.`;
+
+    // Stop reminder if the goal is reached
+    if (intakeLogged >= waterGoal) {
+        clearInterval(intervalId);
+        alert("Congratulations! You've reached your water intake goal for the day!");
+    }
+}
+
+  </script>
+</body>
+</html>
+
+
