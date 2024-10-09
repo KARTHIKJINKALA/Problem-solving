@@ -9,22 +9,185 @@
      <script>
     // Finding the previous prime number
 
-     var num=+prompt("Enter a number:");
-     prev=0
-     for(i=num-1; i>=2; i--){
-        c=0
-        for(j=2; j<i;i++){
-            if(i%j==0){
-               c++
-               break 
-            }
-        }
-        if(c==0){
-            prev=i
-            break
-        }
-     }
-     console.log(prev)
+    //  var num=+prompt("Enter a number:");
+    //  prev=0
+    //  for(i=num-1; i>=2; i--){
+    //     c=0
+    //     for(j=2; j<i;i++){
+    //         if(i%j==0){
+    //            c++
+    //            break 
+    //         }
+    //     }
+    //     if(c==0){
+    //         prev=i
+    //         break
+    //     }
+    //  }
+    //  console.log(prev)
+////////////////////////////////////////
+// Finding the next prime number 
+// var num = +prompt("Enter a number:");
+// temp=num + 1;
+// rightprime= 0;
+// nextfound = 0;
+// while (nextfound==0) {  // Continue until we find two primes
+//     c = 0;
+//     for (k = 2; k<temp; k++) {
+//         if (temp%k==0) {
+//             c++;
+//             break;
+//         }
+//     }
+//     if (c==0) {
+//         nextfound++;
+//         rightprime=temp
+//         break    
+//     }
+//     temp++; 
+// }
+
+// console.log(rightprime);
+/////////////////////////////////////////
+// Finding the nearest prime to the given number
+
+// var num=+prompt("Enter a number:")
+// prev=0
+// for(i=num-1; i>=2; i--){
+//     c=0
+//     for(j=2; j<i; j++){
+//         if(i%j==0){
+//             c++
+//             break
+//         }
+//     }
+//     if(c==0){
+//         prev=i
+//         break
+//     }
+// }
+// console.log(prev)
+
+// temp=num+1
+// rightprime=0
+// nextfound=0
+// while(nextfound==0){
+//     c=0
+//     for(k=2; k<temp;k++){
+//         if(temp%k==0){
+//             c++
+//             break
+//         }
+//     }
+//     if(c==0){
+//        rightprime=temp
+//        break
+//     }
+//     temp++
+    
+// }
+// console.log(rightprime)
+// // finding the nearest primenumber to the the given number
+// if(num-prev===rightprime-num){
+//     console.log("Two nearest prime numbers:"+prev+"and"+rightprime)
+    
+// }
+// else if(num-prev>rightprime-num){
+//     console.log(" next prime number is near:"+rightprime)
+// }
+// else{
+//         console.log("previous prime number is near:"+prev)
+// }
+
+
+ ///////////////////////////////////////
+//  How to find the require next prime 
+//     var num = +prompt("Enter a number:");
+// temp = num + 1;
+// rightprime = 0;
+// nextfound = 0;
+// secondprime = 0;
+//  tenthprime=0
+
+// while (nextfound<=10) {  // Continue until we find two primes
+//     c = 0;
+//     for (k = 2; k < temp; k++) {
+//         if (temp % k == 0) {
+//             c++;
+//             break;
+//         }
+//     }
+//     if (c == 0) {
+//         nextfound++;
+//         if (nextfound == 1) {
+//             rightprime = temp;  // First prime after num
+//         } else if (nextfound == 2) {
+//             secondprime = temp;  // Second prime after num
+//         }
+//     else if (nextfound == 10) {
+//             tenthprime = temp;  // Second prime after num
+//         }
+        
+        
+//     }
+//     temp++;  // Check the next number
+// }
+
+// console.log("First next prime: " + rightprime);
+// console.log("Second next prime: " + secondprime);
+
+// console.log("tenth next prime: " + tenthprime);
+
+
+/////////////////////////////////////////////////////
+// Find how many times a number is iterated 
+// var num=prompt("Enter a  umber:")
+// res=""
+// for(n of num){
+//     if(!res.includes(n)){
+//         res+=n
+//     }
+// }
+// // console.log(res)
+// dup=""
+// unq=""
+// counts=""
+// for(i of res){
+//     c=0
+//     for(j of num){
+//         if(i==j){
+//             c++
+//         }
+//     }
+//     if(c>1){
+//         dup+=i
+      
+//     }
+//     else{
+//         unq+=i
+//     }
+// counts+=i+":"+c+" "
+// }
+// // console.log(dup,unq)
+// console.log(counts)
+
+//////////////////////////
+// includes methods
+
+// var num=prompt("Enter a number") //11223
+// res=""
+// for(i of num){
+//     c=0
+//     for(j=0; j<res.length; j++){
+//         if(i==res[j]){
+//             c++
+//         }
+//     }
+//     if(c==0){
+//         res+=i
+//     }
+// }
+// console.log(res)
      </script>
 </body>
 </html>
