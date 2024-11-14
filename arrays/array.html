@@ -118,6 +118,211 @@
 // }
 // console.log(unq)
 // console.log(dup)
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//  PRINT EVEN NUMBERS IN AN ARRAY
+//  var a=[1,2,3,4,5];
+ 
+//  for(i=0; i<a.length; i++){
+//      if(a[i]%2==0){
+//          console.log("Even numbers are:"+a[i])
+//      }
+//  }
+
+//  EVEN AND ODDCOUNT IN AN ARRAY
+
+// var a=[1,2,3,4,5];
+// evencount=0
+// oddcount=0
+// for(i=0; i<a.length; i++){
+//     if(a[i]%2==0){
+//      evencount++
+
+//     }
+//     else{
+//           oddcount++
+
+//     }
+// }
+// console.log(evencount)
+// console.log(oddcount)
+
+
+// EVEN AND ODD SUM IN AN ARRAY
+// a=[1,2,3,4,5];
+//  evensum=0
+//  oddsum=0
+//  for(i=0; i<a.length; i++){
+//      if(a[i]%2==0){
+//         evensum+=a[i] 
+//      }
+//      else{
+//          oddsum+=a[i]
+//      }
+//  }
+
+// console.log(evensum)
+// console.log(oddsum)
+
+
+// // ARRAY METHODS
+// //  PUSH METHOD
+// var arr=[1,2,3,4]
+// num=50
+// function push(arr,num){
+//     arr[arr.length]=num
+// }
+// push(arr,num)
+
+//  POP METHOD
+//  var arr=[1,2,3,4]
+
+// function remove(arr){
+//     arr.length=arr.length-1
+// }
+// remove(arr)
+// console.log(arr)
+
+
+// SORTING
+// Ascending order
+// arr=[1,11,11,2,3,5]
+
+// for(i=0; i<arr.length; i++){
+//     for(j=i+1; j<arr.length;j++){
+//         if(arr[j]<arr[i]){
+//             x=arr[i]
+//             arr[i]=arr[j]
+//             arr[j]=x
+//         }
+//     }
+// }
+// console.log(arr)
+
+// Descending order
+// arr=[1,11,2,3,5]
+
+// for(i=0; i<arr.length; i++){
+//     for(j=i+1; j<arr.length;j++){
+//         if(arr[j]>arr[i]){
+//             x=arr[i]
+//             arr[i]=arr[j]
+//             arr[j]=x
+//         }
+//     }
+// }
+// console.log(arr)
+
+
+// INCLUDES METHOD
+// var arr=[1,2,3,4,5]
+// n=5
+
+// function includes(arr,n){
+//     c=0
+//     for(i of arr){
+//         if(i==n){
+//             c++
+//             break;
+//         }
+//     }
+//     if(c>0){
+//         console.log("true")
+//     }
+//     else{
+//         console.log("false")
+//     }
+// }
+// includes(arr,n)
+
+//      or 
+
+// function includes(arr,num){
+//     c=0
+//     for(i=0; i<arr.length; i++){
+//         if(arr[i]==n){
+//             c++
+//             break;
+            
+//         }
+//     }
+//     if(c>0){
+//     console.log("true")
+//     }
+//     else{
+//         console.log("false")
+//     }
+// }
+// includes(arr,n)
+
+
+
+//  SLICE
+
+// var arr=[1,2,3,4,5,6]
+
+// start=0;
+// end=1
+
+// function slice(arr,start,end){
+//     emp=[]
+//     for(i=start;i<end; i++){
+//       emp[emp.length]=arr[i]
+//     }
+// console.log(emp)
+// }
+// slice(arr,start,end)
+
+//  SHIFT
+//  arr=[1,2,3,4,5]
+ 
+//  function shift(arr){
+//     emp=[]
+//     for(i=1; i<arr.length; i++){
+//         emp.push(arr[i])
+//     }
+//     console.log(emp)
+//  }
+//  shift(arr)
+
+
+//  UNSHIFT
+// var arr=[1,2,3,4,5]
+// ele=6
+// function unshift(arr,ele){
+//     emp=[]
+//     emp[emp.length]=ele
+    
+//     for(i=0; i<arr.length; i++){
+//         emp.push(arr[i])
+//     }
+//     console.log(emp)
+// }
+// unshift(arr,ele)
+
+
+//  MAXIMUM NO IN A ARRAY
+//  arr=[1,2,3,4,5]
+ 
+//  max=arr[0]
+ 
+//  for(i=0; i<arr.length; i++){
+//      if(arr[i]>max){
+//          max=arr[i]
+//      }
+//  }
+ 
+// MINIMUM NO IN A ARRAY
+// arr=[20,39,384,15]
+//  min=arr[0]
+//  for(i=0; i<arr.length; i++){
+//      if(arr[i]<min){
+//          min=arr[i]
+//      }
+//  }
+//  console.log(min)
+
+
     </script>
 </body>
 </html>
