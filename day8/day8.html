@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=[2,2,2,1,0]
+inc=false
+dec=false
+if(arr[1]>=arr[0]){
+    c=0
+    for(i=0; i<arr.length;i++){
+        if(arr[i+1]>=arr[i]){
+            c++
+        }
+    }
+        if(c==arr.length-1){
+        inc=true
+    }
+    else{
+        inc=false
+    }
+}
+
+if(arr[1]<=arr[0]){
+    
+c=0
+for(j=0;j<arr.length; j++){
+    if(arr[j+1]<=arr[0]){
+        c++
+    }
+}
+if(c==arr.length-1){
+   dec=true 
+}
+else{
+    dec=false
+}
+}
+
+if(inc && dec){
+    console.log("Array elements are same")
+}
+else if(inc){
+    console.log("Increasing order")
+}
+else if(dec){
+    console.log("Decreasing order")
+    
+}
+else{
+    console.log("Array is in unsorted order")
+}
+
+    </script>
+</body>
+</html>
