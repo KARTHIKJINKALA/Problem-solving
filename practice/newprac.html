@@ -345,6 +345,46 @@ var sum=Number(max)+Number(min)
 console.log("max and min sum is:"+sum)
 
 //////////////////////
+// Day-3
+/////////////////////
+//Fibonacci series
+//using the for loop
+var num=+prompt("Enter the number of series")
+
+n1=0
+n2=1
+
+for(i=0;i<num;i++){
+     console.log(n1)
+    n3=n1+n2
+    n1=n2
+    n2=n3
+   
+}
+//using the while loop
+
+var num=+prompt("Enter the number of series")
+
+n1=0
+n2=1
+ i=0
+while(i<=num){
+    console.log(n1)
+    n3=n1+n2
+    n1=n2
+    n2=n3
+    i++
+}
+//////////////////////////////////
+//Find the factorial of the given number
+var num=+prompt("Enter the number:")
+fact=1
+for(i=1;i<=num;i++){
+    fact=fact*i
+}
+console.log(fact)
+
+
 
 
     </script>
