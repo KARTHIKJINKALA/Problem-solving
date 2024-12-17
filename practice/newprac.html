@@ -385,6 +385,47 @@ for(i=1;i<=num;i++){
 console.log(fact)
 
 
+///////////////////////////
+// day-4
+///////////////////////////
+
+// Find the duplicates sum and uniques sum in the given number
+var num=prompt("Enter the number:")
+emp=""
+dupsum=0
+unqsum=0
+for( n of num){
+    if(!emp.includes(n)){
+        emp+=n
+    }
+}
+console.log(emp)
+
+for(i of emp){
+    c=0
+    for(j of num){
+        if(i==j){
+            c++
+        }
+    }
+    if(c==1){
+        console.log("Unqs are:"+i)
+        unqsum+=Number(i)
+    }
+    else{
+           console.log("dups are:"+i)
+        dupsum+=Number(i)
+    }
+}
+
+console.log(dupsum)
+console.log(unqsum)
+
+// 
+
+
+
+
 
 
     </script>
