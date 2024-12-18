@@ -446,7 +446,7 @@ while(true){
 }
 
 /////////////////////////////////////
-Finding the power of the two numbers
+// Finding the power of the two numbers
 var num1=+prompt("Enter a number:")//7
 var num2=+prompt("Enter a power:")//3
 pro=1
@@ -456,8 +456,60 @@ for(i=1;i<=num2;i++){
 }
 console.log(pro)
 
+//////////////////////////////////////
+//Day7
+///////////////////////////////////
+// array sort method
+// ascending order
+var arr=[20,35,677,12,11,9]
 
+for(i=0;i<arr.length;i++){
+    // console.log(arr[i])
+    
+    for(j=i+1;j<arr.length; j++){
+        if(arr[j]<arr[i]){
+            x=arr[i]
+            arr[i]=arr[j]
+            arr[j]=x
+        }
+    }
+}
+console.log(arr)
 
+/////////////////
+// Array sorting in descending order
+// array sort method
+
+var arr=[20,35,677,12,11,9]
+
+for(i=0;i<arr.length;i++){
+    // console.log(arr[i])
+    
+    for(j=i+1;j<arr.length; j++){
+        if(arr[j]>arr[i]){
+            x=arr[i]
+            arr[i]=arr[j]
+            arr[j]=x
+        }
+    }
+}
+console.log(arr)
+
+// Check the given array is  in increasing or not 
+
+var arr=[24,35,67,98,100]
+c=0
+for(i=0;i<arr.length;i++){
+    if(arr[i+1]>arr[i]){
+        c++
+    }
+}
+if(c==arr.length-1){
+    console.log("Array is in increasing order")
+}
+else{
+    console.log("Array is not in increasing order")
+}
 
 
 
