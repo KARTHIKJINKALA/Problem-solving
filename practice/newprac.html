@@ -421,7 +421,40 @@ for(i of emp){
 console.log(dupsum)
 console.log(unqsum)
 
-// 
+////////////////////////////////////////////////
+// day-6
+
+// find the lcm of two numbers
+
+var num1=+prompt("Enter the 1st number:")
+var num2=+prompt("Enter the 2nd number:")
+
+if(num1>num2){
+    max=num1
+}
+else{
+    max=num2
+}
+console.log("maximum is:"+max)
+
+while(true){
+    if(max%num1==0 && max%num2==0 ){
+        console.log("lcm is :"+max)
+        break;
+    }
+    max++
+}
+
+/////////////////////////////////////
+Finding the power of the two numbers
+var num1=+prompt("Enter a number:")//7
+var num2=+prompt("Enter a power:")//3
+pro=1
+for(i=1;i<=num2;i++){
+  pro=pro*num1
+
+}
+console.log(pro)
 
 
 
