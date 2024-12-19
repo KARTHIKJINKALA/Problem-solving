@@ -597,6 +597,71 @@ else{
     console.log("Unsorted")
 }
 
+//////////////////////////
+// day-9
+//////////////////////////
+//Subarrays
+//Sub arrays 
+
+var arr=[[20,34,67],[26,56,23,66],[90,87,65]]
+res_max=[]
+res_min=[]
+for(i=0; i<arr.length; i++){
+ 
+//  console.log(arr[i])
+ max=arr[i][0]
+ min=arr[i][0]
+ for(j of arr[i]){
+    //  
+    if(j>max){
+        max=j
+
+    }
+      if(j<min){
+        min=j
+        
+    }
+ }
+    res_max.push(max)
+   res_min.push(min)
+}
+console.log(res_min,res_max)
+
+  // [[2,5,7]
+      // [5,7,9]
+      // [2,8,4]]
+      // Enter the number of rows:3
+      // Enter the number of cols:3
+
+      // Enter 11 element :*
+      // Enter 12 element :*
+      // .
+      // .
+      // .
+      // Enter  33 element :*
+
+      // How to create the matrix
+      //         var rows=+prompt("Enter the number of rows")
+      // var cols=+prompt("Enter the number of cols")
+      // matrix=[]
+      // for(i=0; i<rows; i++){
+      //     sub=[]
+      //     for(j=0;j<cols;j++){
+      //         console.log("Enter the"+(i+1)+" "+(j+1)+"element")
+      //         ele=+prompt()
+      //         sub.push(ele)
+      //     }
+      //     matrix.push(sub)
+      // }
+      // console.log(matrix)
+
+      // for(i of matrix){
+      //     s=""
+      //     for(j of i){
+      //         s=s+j+" "
+      //     }
+      // console.log(s)
+      // }
 
     </script>
 </body>
