@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // Rotate an Array
+// //       [1, 2, 3, 4, 5], 2  → [4, 5, 1, 2, 3]
+// // Write a function that rotates an array to the right by a given number of steps.
+
+
+// function Right(arr,val){
+    
+//     var emp=[]
+
+// var startind=arr.length-val
+
+// for(i=startind; i<arr.length; i++){
+    
+//         emp[emp.length]=arr[i]
+// }
+
+// for(j=0; j<startind; j++){
+//      emp[emp.length]=arr[j]
+// }
+
+// console.log(emp)
+    
+// }
+// Right([1,2,3,4,5],2)
+
+
+// function Left(arr,val){
+// // console.log(arr,val)    left by 2
+// var emp=[]
+// for(i=val; i<arr.length;i++){
+//     // console.log(arr[i])
+//     emp[emp.length]=arr[i]
+// }
+// for(j=0; j<val;j++){
+//     emp[emp.length]=arr[j]
+// }
+// console.log(emp)
+
+// }
+// Left([1,2,3,4,5],1)
+
+
+// Intersection of Two Arrays
+//       [1, 2, 3], [2, 3, 4]  → [2,3]
+// Write a function that returns the common elements between two arrays.
+
+// function Intersection(arr1,arr2){
+//     var emp=[]
+//     for (i of arr1){
+//         count=0
+//         for(j of arr2){
+//             if(i==j){
+//               count++ 
+//             }
+//             // console.log(i,j)
+//         }
+//         if(count==1){
+//           emp[emp.length]=i
+//         }
+//     }
+//     console.log(emp)
+// }
+// Intersection([1,2,3,5],[2,5,9,7,6])
+
+
+// Find Missing Number
+//       [1, 2, 4, 5]   → [3]
+// Given an array of consecutive numbers with one missing, find the missing number.
+
+// function Missing(arr){
+//     // console.log(arr)
+//     var emp=[]
+//     var miss=[]
+    // for(i=0; i<arr.length+7; i++){
+    //     // 2,5,6,7,10,12,15
+    //   emp[emp.length]=arr[0]+i
+       
+    // }
+    // console.log(arr[arr.length-1])
+    // for (i = arr[0]; i <= arr[arr.length - 1]; i++) {
+        // emp[emp.length] = i; // Fill emp with consecutive numbers
+        // console.log(i)
+    // }
+    // console.log(emp)
+
+//     // console.log(emp)
+// for(j of emp){
+//     // console.log(j)
+//     count=0
+//     for(n of arr){
+//         // console.log(j,n)
+//         if(j== n){
+//             count++
+//         }
+//     }
+//     if(count==0){
+//       miss[miss.length]=j
+//     }
+// }
+// console.log(miss)
+
+// }
+// Missing([2,5,6,7,10,12,15])
+// function Maxproduct(arr) {
+//     var max = arr[0] * arr[1];
+//     var pair = [arr[0], arr[1]];
+
+//     // Find max product of pairs
+//     for (i = 0; i < arr.length; i++) {
+//         for (j = i + 1; j < arr.length; j++) {
+//             var product = arr[i] * arr[j];
+//             if (product > max) {
+//                 max = product;
+//                 pair = [arr[i], arr[j]];
+//             }
+//         }
+//     }
+               
+
+//     console.log("Maximum product:", max);
+//     console.log("Pair giving max product:", pair);
+// }
+
+// Maxproduct([3, 5, -2, 8, 13]);
+
+// Move Zeros to End
+//       [0, 1, 0, 3, 12] → [1, 3, 12, 0, 0]
+// Write a function that moves all zeros in an array to the end while maintaining the order of other elements.
+
+// function Zeros(arr){
+//     // console.log(arr)
+//     var emp=[]
+//     var emp1=[]
+//     for (i of arr){
+//         // console.log(i)
+//         if(i!==0){
+//             emp[emp.length]=i
+//         }
+//       else{
+//           emp1[emp1.length]=i
+//       }
+//     }
+//     console.log(emp)
+//     console.log(emp1)
+ 
+//  for( j of emp1){
+//     //  console.log(j)
+//     emp[emp.length]=j
+//  }
+//  console.log(emp)
+    
+// }
+// Zeros([0, 1, 0, 3,0, 12])
+
+
+
+// Pair Sum
+//       [2, 4, 3, 5, 7, 8, 9], 7 →  [[4, 3], [2, 5]]
+// Write a function to find all pairs in an array whose sum is equal to a given target.
+
+// function Pairsum(arr,target){
+    
+//     var emp=[]
+//     for(i=0;i<arr.length; i++){
+//         // console.log(arr[i])
+//         for(j=i+1; j<arr.length;j++){
+//             var sum=arr[i]+arr[j]
+//             // console.log(sum)
+//             if(sum==target){
+//               emp[emp.length]=[arr[i],arr[j]]
+//             }
+//             // console.log(arr[i],arr[j])
+//         }
+//     }
+//     // console.log(emp)
+//     var emp1=[]
+//     for(n=emp.length-1;n>=0;n--){
+//         emp1[emp1.length]=emp[n]
+//     }
+//     console.log(emp1)
+    
+// }
+// Pairsum([2,4,3,5,7,9],7)
+
+
+// Find Peak Element
+//       [1, 3, 20, 4, 1, 0] →  20
+// Write a function to find a peak element in an array. An element is a peak if it is not smaller than its neighbours.
+
+
+// function Peak(arr){
+// //  if we have the sigle value array,that value is the peak one 
+// var peak=[]
+// if(arr.length==1){
+//     peak[peak.length]=arr[0]
+// }
+
+//  if(arr[0]>=arr[1]){
+//     peak[peak.length]=arr[0]
+// }
+
+// for(i=1;i<arr.length-1; i++){
+//     // console.log(arr[i])
+//     if(arr[i]>=arr[i-1] && arr[i]>=arr[i+1]){
+//         peak[peak.length]=arr[i]
+//     }
+// }
+
+// if(arr[arr.length-1]>=arr[arr.length-2]){
+//     peak[peak.length]=arr[i]
+// }
+// console.log(peak)
+    
+// }
+// Peak([1, 3, 20, 4, 1, 0])
+// Peak([3, 7, 9, 2, 2, 6, 6, 4])
+
+// Find the First Duplicate
+//       [2, 1, 3, 5, 3, 2] → 3
+// Write a function to return the first duplicate value in an array.
+// function Firstdup(arr) {
+//     var emp = []    // To store unique elements
+//     var dup = []    // To store duplicate elements
+
+//     // Step 1: Check for duplicates and add unique elements to emp
+//     for (i of arr) {
+//         count = 0
+//         for (j of emp) {
+//             if (i == j) {
+//                 count++
+//             }
+//         }
+//         if (count == 0) {
+//             emp[emp.length] = i
+//         }
+//     }
+//     // console.log(emp)   // To check unique elements in emp
+
+//     // Step 2: Find all duplicate elements
+//     for (n of emp) {
+//         count1 = 0
+//         for (l of arr) {
+//             if (n == l) {
+//                 count1++
+//             }
+//         }
+//         // Add only duplicates to dup
+//         if (count1 > 1) {
+//             // dup[dup.length] = n
+//             console.log(n)
+//             return
+//         }
+//     }
+    
+//     // console.log(dup)   // To check all duplicates
+
+//     // Step 3: Return the first duplicate
+//     // var firstdup = dup[0]
+//     // console.log(firstdup)
+// }
+
+// Firstdup([2, 1, 3, 5, 3, 2])  // Output: 3
+// Firstdup([2, 1, 3, 5, 3, 2])   // Output: 3 ✅
+// Firstdup([1, 2, 3, 4, 5])      // Output: -1 (no duplicates)
+// Firstdup([9, 7, 1, 3, 7, 5])   // Output: 7 ✅
+// Firstdup([10, 20, 30, 10, 50]) // Output: 10 ✅
+// Firstdup([])          
+
+// function Dup(arr){
+//     var emp=[]
+//     count=0
+//     for(i of arr){
+//         for(j of emp){
+//         if(i==j){
+//           count++
+//         }
+//         }
+//         if(count>1){
+//             emp[emp.length]=i
+//         }
+//     }
+//     console.log(emp)
+    
+// }
+// Dup([2, 1, 3, 5, 3, 2])
+
+
+// Flatten a Nested Array
+//       [1, [2, [3, [4]], 5]] → [1, 2, 3, 4, 5]
+// Write a function to flatten a nested array into a single array.
+
+
+    </script>
+</body>
+</html>
